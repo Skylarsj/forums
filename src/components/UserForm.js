@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+
+
 const UserForm = (props) => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
@@ -7,12 +9,12 @@ const UserForm = (props) => {
     const createUser = (e) => {
 
         e.preventDefault();
-        
-        const newUser = { 
-            username: username, 
-            email: email, 
-            password: password 
-        };
+
+        const newUser = { username, email, password };
+        setUsername("");
+        setEmail("");
+        setPassword("");
+
         console.log("Welcome", newUser);
     };
     
@@ -34,5 +36,4 @@ const UserForm = (props) => {
         </form>
     );
 };
-    
 export default UserForm;
