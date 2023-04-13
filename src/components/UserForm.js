@@ -15,6 +15,8 @@ const UserForm = (props) => {
 
     const createUser = (e) => {
 
+        e.preventDefault();
+
         setHasBeenSubmitted(true);
 
     };
@@ -36,7 +38,7 @@ const UserForm = (props) => {
             
             <div>
                 <p>Live Feed</p>
-                <p>First Name: {formInput.firstName}</p>
+                <p>First Name: {formInput}</p>
             </div>
         </div>
     );
